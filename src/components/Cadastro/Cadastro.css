@@ -55,3 +55,21 @@
     align-items: center;
     margin: 10px 0 20px;
 }
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .cadastro {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px auto;
+    }
+
+    .cadastro__img {
+        width: 200px;
+        margin: 5px 0;
+    }
+
+    .cadastro__form {
+        width: 90%;
+    }
+}
