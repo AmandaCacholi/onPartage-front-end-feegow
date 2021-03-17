@@ -4,6 +4,7 @@ import { Cadastro } from "./components/Cadastro/Cadastro";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
+import { LoginC } from "./components/LoginCliente/LoginC";
 
 function App() {
   return (
@@ -12,9 +13,12 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact>
-            <Home/>
-            </Route>
-          <Route path="/cadastro-cliente" >
+            <Home />
+          </Route>
+          <Route path="/login-cliente">
+            <LoginC />
+          </Route>
+          <Route path="/cadastro-cliente">
             <Cadastro />
           </Route>
         </Switch>

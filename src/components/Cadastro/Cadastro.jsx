@@ -43,8 +43,8 @@ export const Cadastro = () => {
             margin="normal"
           />
           <div className="cadastro__termos" >
-            <Switch name="promocoes" color="primary" required={true} />
-            <p className="cadastro__subtitulo" >Concordo com os <span>Termos de Serviço</span> da onPartage</p>
+            <Switch name="termo" color="primary" required={true} />
+            <p className="cadastro__termosTexto" >Concordo com os <span>Termos de Serviço</span> da onPartage</p>
           </div>
           <BtnContato>Criar conta</BtnContato>
         </form>
