@@ -1,71 +1,81 @@
-.cadastro {
+.loginC {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.cadastro__imgBg {
-    background: var(--dark-blue);
+.loginC__imgBg {
+    background: var(--primary-yellow);
     display: flex;
     justify-content: center;
     margin: 5px 0;
 }
 
-.cadastro__img {
-    width: 350px;
+.loginC__img {
+    width: 400px;
 }
 
-.cadastro__formWrapper {
+.loginC__formWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    margin: 50px 0;
 }
 
-.cadastro__titulo {
+.loginC__titulo {
     font-family: var(--body-font);
     font-size: 30px;
     font-weight: 400;
     margin: 20px 0 10px;
 }
 
-.cadastro__titulo span {
+.loginC__titulo span {
     color: var(--dark-blue);
     font-weight: 600;
 }
 
-.cadastro__subtitulo {
+.loginC__subtitulo {
     font-family: var(--body-font);
     font-size: 15px;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
-.cadastro__subtitulo span {
+.loginC__subtitulo span {
     color: var(--dark-blue);
     font-weight: 600;
     cursor: pointer;
 }
 
-.cadastro__form {
+.loginC__form {
     display: flex;
     flex-direction: column;
     width: 70%;
     margin: 20px 0;
 }
 
-.cadastro__termos {
+.loginC__lembrar {
+    width: 100%;
     display: flex;
     align-items: center;
     margin: 10px 0 20px;
+    justify-content: space-between;
 }
 
-.cadastro__termosTexto {
+.loginC__switchLabel {
+    display: flex;
+    align-items: center;
+}
+
+.loginC__lembrarTexto {
     font-family: var(--body-font);
     font-size: 15px;
     font-weight: 400;
 }
 
-.cadastro__termosTexto span {
-    font-weight: 600;
+.loginC__esqueceuSenha {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 400;
     color: var(--dark-blue);
     cursor: pointer;
 }
@@ -73,17 +83,17 @@
 /* ------------------ Responsividade */
 
 @media (max-width: 995px) {
-    .cadastro {
+    .loginC {
         grid-template-columns: 1fr;
         grid-template-rows: 150px auto;
     }
 
-    .cadastro__img {
+    .loginC__img {
         width: 200px;
         margin: 5px 0;
     }
 
-    .cadastro__form {
+    .loginC__form {
         width: 90%;
     }
 }
