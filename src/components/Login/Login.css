@@ -1,0 +1,39 @@
+.login__form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px 0;
+}
+
+.login__lembrar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+    justify-content: space-between;
+}
+
+.login__switchLabel {
+    display: flex;
+    align-items: center;
+}
+
+.login__lembrarTexto {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.login__esqueceuSenha {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+@media (max-width: 995px) {
+    .loginC__form {
+        width: 90%;
+    }
+}
