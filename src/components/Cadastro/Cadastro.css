@@ -1,0 +1,57 @@
+.cadastro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cadastro__imgBg {
+    background: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro__img {
+    width: 400px;
+}
+
+.cadastro__formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cadastro__titulo {
+    font-family: var(--body-font);
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px 0 10px;
+}
+
+.cadastro__titulo span {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.cadastro__subtitulo {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.cadastro__subtitulo span {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.cadastro__form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px 0;
+}
+
+.cadastro__termos {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+}
