@@ -1,0 +1,43 @@
+.sobre {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sobre__textoWrapper {
+    width: 40%;
+}
+
+.sobre__texto {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.sobre__time {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .sobre {
+        flex-direction: column;
+    }
+
+    .sobre__textoWrapper {
+        width: 95%;
+    }
+
+    .sobre__texto {
+        font-size: 18px;
+    }
+
+    .sobre__time {
+        width: 95%;
+    }
+}

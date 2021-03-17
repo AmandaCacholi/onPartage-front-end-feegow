@@ -1,0 +1,22 @@
+.contato__titulo {
+    font-size: 30px;
+    font-family: var(--body-font);
+    font-weight: 600;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.contato__form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .contato__form {
+        width: 100%;
+    }
+}
