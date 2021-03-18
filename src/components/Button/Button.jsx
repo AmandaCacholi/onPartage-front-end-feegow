@@ -39,12 +39,8 @@ export const BtnAmareloHeader = styled(Button)({
 });
 
 export const BtnContato = styled(Button)({
-  background: 'var(--primary-yellow)',
-    '&:hover':{
-        background: 'var(--secondary-yellow)',
-    },
-  border: 0,
-  borderRadius: 0,
+
+  
   boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
   color: 'var(--dark-blue)',
   height: 48,
@@ -55,3 +51,21 @@ export const BtnContato = styled(Button)({
   fontSize: '18px',
   width: '100%'
 })
+
+export const BtnAmareloPanel = styled(Button)({
+  background: 'var(--primary-yellow)',
+    '&:hover': {
+      background: 'var(--secondary-yellow)',
+    },
+  border: 0,
+  borderRadius: "11px",
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: '#110066',
+  height: "55px",
+  padding: '0 30px',
+  fontFamily: 'var(--body-font)',
+  fontWeight: 600,
+  textTransform: 'none',
+  fontSize: '18px',
+  width: '322px'
+});

@@ -1,0 +1,15 @@
+.user-panel {
+  position: relative;
+  width: 433px;
+  height: 1280px;
+  background-color: #110066;
+}
+
+.buttons-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-area > button {
+  margin: 0px 71px 50px 40px;
+}

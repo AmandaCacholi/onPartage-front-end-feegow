@@ -4,6 +4,7 @@ import { Cadastro } from "./components/Cadastro/Cadastro";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
+import CostumersPage from "./components/CostumersPage/CostumersPage";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact>
-            <Home/>
-            </Route>
-          <Route path="/cadastro-cliente" >
+            <Home />
+          </Route>
+          <Route path="/cadastro-cliente">
             <Cadastro />
+            {/* <CostumersPage /> */}
           </Route>
         </Switch>
         <Footer />
