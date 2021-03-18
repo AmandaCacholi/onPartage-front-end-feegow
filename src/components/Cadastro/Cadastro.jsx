@@ -25,26 +25,29 @@ export const Cadastro = () => {
             margin="normal"
           />
           <TextField
+            type="email"
             id="cadastro__email"
             label="Email"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            type="password"
             id="cadastro__senha"
             label="Senha"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            type="password"
             id="cadastro__senhaDois"
             label="Digite a senha novamente"
             variant="outlined"
             margin="normal"
           />
           <div className="cadastro__termos" >
-            <Switch name="promocoes" color="primary" required={true} />
-            <p className="cadastro__subtitulo" >Concordo com os <span>Termos de Serviço</span> da onPartage</p>
+            <Switch name="termo" color="primary" required={true} />
+            <p className="cadastro__termosTexto" >Concordo com os <span>Termos de Serviço</span> da onPartage</p>
           </div>
           <BtnContato>Criar conta</BtnContato>
         </form>

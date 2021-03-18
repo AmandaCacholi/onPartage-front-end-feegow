@@ -29,12 +29,16 @@ export const Header = (props) => {
             <Nav className="header__nav__item" href="#contato">
               Contato
             </Nav>
-            <Nav className="header__nav__item" href="#sou-funcionario">
-              Sou funcionário
-            </Nav>
+            <Link to="/login-funcionario">
+              <Nav className="header__nav__item" href="#sou-funcionario">
+                Sou funcionário
+              </Nav>
+            </Link>
           </Nav>
           <Nav className="header__nav__btns">
-            <BtnAmareloHeader>Acessar</BtnAmareloHeader>
+            <Link to="/login-cliente">
+              <BtnAmareloHeader>Acessar</BtnAmareloHeader>
+            </Link>
             <Link to="/cadastro-cliente">
               <BtnAzulHeader>Cadastre-se</BtnAzulHeader>
             </Link>
