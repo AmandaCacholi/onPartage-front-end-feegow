@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
 import { LoginC } from "./components/LoginCliente/LoginC";
+import { LoginF } from './components/LoginFuncionario/LoginF'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route>
+          <Route path="/login-funcionario">
+            <LoginF/>
+          </Route>
           <Route path="/login-cliente">
             <LoginC />
           </Route>
@@ -22,6 +26,7 @@ function App() {
             <Cadastro />
           </Route>
         </Switch>
+        {/* <LoginF/> */}
         <Footer />
       </BrowserRouter>
     </div>

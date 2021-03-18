@@ -25,18 +25,21 @@ export const Cadastro = () => {
             margin="normal"
           />
           <TextField
+            type="email"
             id="cadastro__email"
             label="Email"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            type="password"
             id="cadastro__senha"
             label="Senha"
             variant="outlined"
             margin="normal"
           />
           <TextField
+            type="password"
             id="cadastro__senhaDois"
             label="Digite a senha novamente"
             variant="outlined"

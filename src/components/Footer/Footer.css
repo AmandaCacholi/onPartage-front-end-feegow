@@ -1,14 +1,14 @@
 footer {
     background-color: var(--dark-blue);
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .footer__redes {
-    width: 30px;
-    margin: 5px;
+    width: 20px;
+    margin: 10px 5px;
 }
 
 .footer__redes:hover {
@@ -16,5 +16,17 @@ footer {
 }
 
 .footer__logo {
-    width: 150px;
+    width: 100px;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    footer {
+        padding: 10px;
+    }
+
+    .footer__redes {
+        margin: 5px 3px;
+    }
 }
