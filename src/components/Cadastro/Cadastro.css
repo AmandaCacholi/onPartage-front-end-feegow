@@ -1,13 +1,14 @@
 .cadastro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .cadastro__imgBg {
-    background: var(--dark-blue);
+    background: linear-gradient(#110066, #0A003F);
     display: flex;
     justify-content: center;
     margin: 5px 0;
+    border-radius: 0 10px 10px 0;
 }
 
 .cadastro__img {
@@ -48,7 +49,7 @@
 .cadastro__form {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 55%;
     margin: 20px 0;
 }
 
@@ -76,6 +77,10 @@
     .cadastro {
         grid-template-columns: 1fr;
         grid-template-rows: 150px auto;
+    }
+
+    .cadastro__imgBg {
+        border-radius: 0 0 10px 10px;
     }
 
     .cadastro__img {

@@ -4,23 +4,31 @@
         "esq esq esq dir";
 }
 
+.loginF__bgTitulo {
+    grid-area: esq;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .loginF__titulo {
     font-family: var(--body-font);
     font-size: 30px;
     font-weight: 400;
     margin: 20px 0 10px;
     color: var(--dark-blue);
-    grid-area: esq;
     text-align: center;
-    margin: 60px 0 0;
+    margin-top: 10%;
 }
 
 .loginF__form {
+    width: 55%;
     grid-area: esq;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 20px auto;
 }
 
 .loginF__imgBg {
@@ -32,4 +40,42 @@
 
 .loginF__img {
     width: 250px;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .loginF {
+        grid-template-areas: 
+            "top-dir top-dir top-dir top-esq"
+            "bottom bottom bottom bottom";
+    }
+
+    .loginF__bgTitulo {
+        grid-area: top-dir;
+        background: linear-gradient(#110066, #0A003F);
+        justify-content: center;
+    }
+
+    .loginF__titulo {
+        grid-area: top-dir;
+        color: white;
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .loginF__form {
+        grid-area: bottom;
+        width: 90%;
+    }
+
+    .loginF__imgBg {
+        grid-area: top-esq;
+        justify-content: flex-end;
+    }
+
+    .loginF__img {
+        width: 50px;
+        margin-right: 5px;
+    }
 }

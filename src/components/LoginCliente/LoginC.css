@@ -1,6 +1,6 @@
 .loginC {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .loginC__imgBg {
@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     margin: 5px 0;
+    border-radius: 0 10px 10px 0;
 }
 
 .loginC__img {
@@ -47,38 +48,10 @@
 }
 
 .loginC__form {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 20px 0;
+    width: 55%;
 }
 
-.loginC__lembrar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 10px 0 20px;
-    justify-content: space-between;
-}
 
-.loginC__switchLabel {
-    display: flex;
-    align-items: center;
-}
-
-.loginC__lembrarTexto {
-    font-family: var(--body-font);
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.loginC__esqueceuSenha {
-    font-family: var(--body-font);
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--dark-blue);
-    cursor: pointer;
-}
 
 /* ------------------ Responsividade */
 
@@ -86,6 +59,10 @@
     .loginC {
         grid-template-columns: 1fr;
         grid-template-rows: 150px auto;
+    }
+
+    .loginC__imgBg {
+        border-radius: 0 0 10px 10px;
     }
 
     .loginC__img {

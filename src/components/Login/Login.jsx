@@ -3,16 +3,18 @@ import './Login.css'
 import { TextField, Switch } from "@material-ui/core";
 import { BtnContato } from "../Button/Button";
 
-export const Login = () => {
+export const Login = (props) => {
     return (
         <form className="login__form">
           <TextField
-            id="login__email"
-            label="Email"
+            type={props.type}
+            id={props.id}
+            label={props.label}
             variant="outlined"
             margin="normal"
           />
           <TextField
+            type="password"
             id="login__senha"
             label="Senha"
             variant="outlined"
