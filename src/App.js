@@ -4,6 +4,7 @@ import { Cadastro } from "./components/Cadastro/Cadastro";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
+import { HomeFuncionario } from "./components/HomeFuncionario/HomeFuncionario";
 import { LoginC } from "./components/LoginCliente/LoginC";
 import { LoginF } from './components/LoginFuncionario/LoginF'
 
@@ -25,8 +26,10 @@ function App() {
           <Route path="/cadastro-cliente">
             <Cadastro />
           </Route>
+          <Route path="/area-funcionario" >
+            <HomeFuncionario/>
+          </Route>
         </Switch>
-        {/* <LoginF/> */}
         <Footer />
       </BrowserRouter>
     </div>

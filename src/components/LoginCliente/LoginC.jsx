@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import imgLoginC from "../../assets/images/login-cliente.svg";
+import { BtnContato } from "../Button/Button";
 import { Login } from "../Login/Login";
 import "./LoginC.css";
 
@@ -17,6 +18,7 @@ export const LoginC = () => {
         </p>
         <div className="loginC__form" >
           <Login type="email" id="loginC__id" label="Email" />
+          <BtnContato>Entrar</BtnContato>
         </div>
       </div>
     </section>
