@@ -27,7 +27,6 @@ export const Login = (props) => {
             </div>
             <p className="login__esqueceuSenha">Esqueceu sua senha?</p>
           </div>
-          <BtnContato>Entrar</BtnContato>
         </form>
     )
 }
