@@ -52,7 +52,12 @@ export const BtnContato = styled(Button)({
   width: '100%'
 })
 export const BtnAmareloPanel = styled(Button)({
-   borderRadius: "11px",
+  background: 'var(--primary-yellow)',
+    '&:hover': {
+      background: 'var(--secondary-yellow)',
+    },
+  border: 0, 
+  borderRadius: "11px",
   boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
   color: '#110066',
   height: "55px",
