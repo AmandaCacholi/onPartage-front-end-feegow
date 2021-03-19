@@ -13,3 +13,28 @@
 .buttons-area > button {
   margin: 0px 71px 50px 40px;
 }
+
+.logo-container {
+  padding: 150px 0px 200px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.user-upload-area {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 1460px;
+  height: 800px;
+}
+
+.tittle-area > h1 {
+  margin: 121px 0px 141px 0px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 61px;
+  color: #110066;
+  text-align: center;
+}
