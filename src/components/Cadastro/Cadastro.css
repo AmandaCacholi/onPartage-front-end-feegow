@@ -7,8 +7,6 @@
     background: linear-gradient(#110066, #0A003F);
     display: flex;
     justify-content: center;
-    margin: 5px 0;
-    border-radius: 0 10px 10px 0;
 }
 
 .cadastro__img {
@@ -77,10 +75,6 @@
     .cadastro {
         grid-template-columns: 1fr;
         grid-template-rows: 150px auto;
-    }
-
-    .cadastro__imgBg {
-        border-radius: 0 0 10px 10px;
     }
 
     .cadastro__img {

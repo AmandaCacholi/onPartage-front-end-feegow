@@ -32,6 +32,8 @@
     cursor: pointer;
 }
 
+/* ------------------ Responsividade */
+
 @media (max-width: 995px) {
     .loginC__form {
         width: 90%;

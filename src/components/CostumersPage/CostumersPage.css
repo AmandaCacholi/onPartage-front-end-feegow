@@ -1,6 +1,8 @@
 .homeC {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-columns: 
+    "esq dir";
 }
 
 .homeC__menu {
@@ -9,8 +11,6 @@
   background: linear-gradient(#110066, #0A003F);
   align-items: center;
   justify-content: space-evenly;
-  margin: 5px 0;
-  border-radius: 0 10px 10px 0;
 }
 
 .homeC__img {
@@ -77,43 +77,44 @@
   width: 100px;
 }
 
-/* .user-panel {
-  position: relative;
-  width: 433px;
-  height: 1280px;
-  background-color: #110066;
-}
+/* ------------------ Responsividade */
 
-.buttons-area {
-  display: flex;
-  flex-direction: column;
-}
+@media (max-width: 995px) {
+  .homeC {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr auto ;
+    grid-template-areas: 
+      "top"
+      "bottom";
+  }
 
-.buttons-area > button {
-  margin: 0px 71px 50px 40px;
-}
+  .homeC__menu {
+    grid-area: bottom;
+    padding: 10px;
+  }
 
-.logo-container {
-  padding: 150px 0px 200px 0px;
-  display: flex;
-  justify-content: center;
-}
+  .homeC__img {
+    width: 45px;
+  }
 
-.user-upload-area {
-  position: absolute;
-  top: 100px;
-  right: 0;
-  width: 1460px;
-  height: 800px;
-}
+  .homeC__btnMenu {
+    width: 100%;
+  }
 
-.tittle-area > h1 {
-  margin: 121px 0px 141px 0px;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 52px;
-  line-height: 61px;
-  color: #110066;
-  text-align: center;
-} */
+  .homeC__areaPrincipal {
+    grid-area: top;
+  }
+
+  .homeC__areaUpload {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .homeC__input {
+    width: 90%;
+  }
+
+  .homeC__arrasteUpload {
+    width: 90%;
+  }
+}

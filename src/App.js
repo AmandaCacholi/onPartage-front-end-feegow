@@ -16,7 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        {/* <Switch>
+        <Switch>
           <Route path="/" exact>
             <Home />
           </Route>
@@ -29,13 +29,15 @@ function App() {
           </Route>
 
           <Route path="/cadastro-cliente">
-            <Cadastro /> */}
+            <Cadastro />
+          </Route>
+          <Route path="/area-cliente">
             <CostumersPage />
-          {/* </Route>
+          </Route>
           <Route path="/area-funcionario">
             <HomeFuncionario />
           </Route>
-        </Switch> */}
+        </Switch>
         <Footer />
       </BrowserRouter>
     </div>
