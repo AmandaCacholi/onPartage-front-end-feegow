@@ -9,8 +9,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5px 0;
-    border-radius: 0 10px 10px 0;
 }
 
 .homeF__img {
@@ -46,10 +44,6 @@
     .homeF {
         grid-template-columns: 1fr;
         grid-template-rows: 100px auto;
-    }
-
-    .homeF__bgImg {
-        border-radius: 0 0 10px 10px;
     }
 
     .homeF__img {

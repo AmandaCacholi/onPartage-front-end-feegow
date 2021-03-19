@@ -4,15 +4,13 @@
 }
 
 .loginC__imgBg {
-    background: var(--primary-yellow);
+    background: linear-gradient(#110066, #0A003F);
     display: flex;
     justify-content: center;
-    margin: 5px 0;
-    border-radius: 0 10px 10px 0;
 }
 
 .loginC__img {
-    width: 400px;
+    width: 300px;
 }
 
 .loginC__formWrapper {
@@ -51,6 +49,10 @@
     width: 55%;
 }
 
+.loginC__btn {
+    width: 100%;
+}
+
 
 
 /* ------------------ Responsividade */
@@ -59,10 +61,6 @@
     .loginC {
         grid-template-columns: 1fr;
         grid-template-rows: 150px auto;
-    }
-
-    .loginC__imgBg {
-        border-radius: 0 0 10px 10px;
     }
 
     .loginC__img {

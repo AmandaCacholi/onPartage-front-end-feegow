@@ -40,8 +40,6 @@
     justify-content: center;
     grid-area: dir;
     background: linear-gradient(#110066, #0A003F);
-    margin: 5px 0;
-    border-radius: 10px 0 0 10px;
 }
 
 .loginF__img {
@@ -61,8 +59,6 @@
         grid-area: top-dir;
         background: linear-gradient(#110066, #0A003F);
         justify-content: center;
-        margin: 5px 0;
-        border-radius: 0 0 0 10px;
     }
 
     .loginF__titulo {
@@ -80,8 +76,6 @@
     .loginF__imgBg {
         grid-area: top-esq;
         justify-content: flex-end;
-        border-radius: 0;
-        border-radius: 0 0 10px 0;
     }
 
     .loginF__img {
