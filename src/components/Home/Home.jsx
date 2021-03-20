@@ -1,4 +1,4 @@
-import { Grow } from "@material-ui/core";
+import { Grow, Fab } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import imgHomeUm from "../../assets/images/imagem-section-1.svg";
@@ -14,6 +14,8 @@ import "./Home.css";
 export const Home = () => {
   return (
     <>
+    
+
       <h2 className="home__titulo">
         Armazenamento em nuvem com segurança e privacidade
       </h2>
@@ -44,7 +46,7 @@ export const Home = () => {
       </section>
 
       <section className="home__planos">
-        <Titulo>Nossos Planos</Titulo>
+        <Titulo id="planos">Nossos Planos</Titulo>
         <div className="home__planosWrapper">
           <Planos
             nomePlano="Bronze"
@@ -72,12 +74,12 @@ export const Home = () => {
       </section>
 
       <section className="home__sobre">
-        <Titulo>Quem Somos</Titulo>
+        <Titulo id="sobre" >Quem Somos</Titulo>
         <Sobre />
       </section>
 
       <section className="home__contato">
-        <Titulo>Contato</Titulo>
+        <Titulo id="contato" >Contato</Titulo>
         <Contato />
       </section>
 

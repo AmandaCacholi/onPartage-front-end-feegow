@@ -5,7 +5,7 @@ import { Time } from "../Time/Time";
 
 export const Sobre = () => {
   return (
-    <div className="sobre">
+    <section className="sobre">
       <div className="sobre__textoWrapper">
         <p className="sobre__texto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget
@@ -32,6 +32,6 @@ export const Sobre = () => {
           titulo="Front End Developer"
         />
       </div>
-    </div>
+    </section>
   );
 };
