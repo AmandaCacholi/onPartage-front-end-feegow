@@ -2,6 +2,11 @@ header {
     background: var(--primary-yellow);
 }
 
+.navbar {
+    background: var(--primary-yellow);
+    
+}
+
 .header__imagem {
     width: 160px;
 }
@@ -17,6 +22,7 @@ header {
     font-weight:500;
     font-size: 15px;
     color: var(--dark-blue);
+    cursor: pointer;
 }
 
 .header__nav__btns {
