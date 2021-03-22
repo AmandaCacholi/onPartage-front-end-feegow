@@ -24,58 +24,7 @@
   justify-content: center;
 }
 
-.homeC__areaPrincipal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.homeC__titulo {
-  font-family: var(--body-font);
-  font-weight: 500;
-  font-size: 30px;
-  color: var(--dark-blue);
-  margin: 60px 0 30px;
-}
-
-.homeC__areaUpload {
-  display: flex;
-  margin: 20px 0 10px 0;
-}
-
-.homeC__input {
-  width: 350px;
-  height: 48px;
-  border: var(--dark-blue) solid 5px;
-  border-right: none;
-  border-radius: 10px 0 0 10px;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-}
-
-.homeC__inputTexto {
-  font-family: var(--body-font);
-  color: var(--grey);
-  cursor: default;
-}
-
-.homeC__arrasteUpload {
-  width: 550px;
-  height: 300px;
-  border: var(--grey) dashed 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 40px;
-}
-
-.homeC__imgFiles {
-  width: 100px;
-}
 
 /* ------------------ Responsividade */
 
@@ -89,7 +38,7 @@
   }
 
   .homeC__menu {
-    grid-area: bottom;
+    grid-area: top;
     padding: 10px;
   }
 

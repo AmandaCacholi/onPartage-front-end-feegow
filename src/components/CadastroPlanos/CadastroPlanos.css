@@ -1,0 +1,28 @@
+.cadastroPlanos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastroPlanos__titulo {
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--dark-blue);
+    margin: 60px 0 30px;
+}
+  
+.cadastroPlanos__form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .cadastroPlanos__form {
+        width: 90%;
+    }
+}

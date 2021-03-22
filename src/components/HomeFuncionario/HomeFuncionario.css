@@ -1,41 +1,26 @@
 .homeF {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .homeF__bgImg {
     background: linear-gradient(#110066, #0A003F);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 20px 0;
 }
 
 .homeF__img {
     width: 75px;
+    margin: 0 0 10px;
 }
 
-.homeF__areaPrincipal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.homeF__titulo {
-    font-family: var(--body-font);
-    font-weight: 500;
-    font-size: 30px;
-    color: var(--dark-blue);
-    margin: 60px 0 30px;
-}
-
-.homeF__btns {
-    width: 60%;
+.homeF__nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:center;
-    margin: 30px 0 50px;
+    justify-content: center;
 }
 
 /* ------------------ Responsividade */
@@ -43,14 +28,10 @@
 @media (max-width: 995px) {
     .homeF {
         grid-template-columns: 1fr;
-        grid-template-rows: 100px auto;
+        grid-template-rows: auto auto;
     }
 
     .homeF__img {
         width: 45px;
-    }
-
-    .homeF__btns {
-        width: 90%;
     }
 }

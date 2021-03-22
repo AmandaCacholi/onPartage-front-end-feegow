@@ -31,10 +31,10 @@ function App() {
           <Route path="/cadastro-cliente">
             <Cadastro />
           </Route>
-          <Route path="/area-cliente">
+          <Route path="/area-cliente/">
             <CostumersPage />
           </Route>
-          <Route path="/area-funcionario">
+          <Route path="/area-funcionario/">
             <HomeFuncionario />
           </Route>
         </Switch>
