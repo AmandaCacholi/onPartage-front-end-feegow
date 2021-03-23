@@ -3,3 +3,11 @@
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .gerenciarPlanos__cardPlanos {
+        justify-content: center;
+    }
+}

@@ -24,3 +24,11 @@
 .cardReq__info span {
     font-weight: bold;
 }
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .cardReq__bg {
+        width: 90%;
+    }
+}
