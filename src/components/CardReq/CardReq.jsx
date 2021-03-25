@@ -32,8 +32,8 @@ export const CardReq = (props) => {
       </p>
       <div className="cardReq__flexImg" >
         <div className="cardReq__imgWrapper">
-          <img className="cardReq__img" id={props.id} src={imgEdit} onDoubleClick={props.onClickModal} />
-          <img className="cardReq__img" id={props.id} src={imgDelete} onDoubleClick={props.onDoubleClickDelete} />
+          <img alt="" className="cardReq__img" id={props.id} src={imgEdit} onDoubleClick={props.onClickModal} />
+          <img alt="" className="cardReq__img" id={props.id} src={imgDelete} onDoubleClick={props.onDoubleClickDelete} />
         </div>
       </div>
     </div>

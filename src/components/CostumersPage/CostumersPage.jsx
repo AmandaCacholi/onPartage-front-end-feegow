@@ -12,7 +12,7 @@ export default function clientPage() {
     <section className="homeC">
       <Grow in={true} timeout={1000}>
         <div className="homeC__menu">
-          <img src={Logo} className="homeC__img" />
+          <img alt="" src={Logo} className="homeC__img" />
           <nav className="homeC__btnMenu">
             <NavLink to="/area-cliente/upload">
               <BtnAmareloPanel>Enviar arquivos</BtnAmareloPanel>

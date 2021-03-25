@@ -1,4 +1,4 @@
-import { Grow, Fab } from "@material-ui/core";
+import { Grow } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import imgHomeUm from "../../assets/images/imagem-section-1.svg";
@@ -29,12 +29,12 @@ export const Home = () => {
               <BtnAmareloHeader>Cadastre-se</BtnAmareloHeader>
             </Link>
           </div>
-          <img className="homeSection__img" src={imgHomeUm} />
+          <img alt="" className="homeSection__img" src={imgHomeUm} />
         </section>
       </Grow>
       <Grow in={true} timeout={1000}>
         <section className="homeSection homeSection__reverse">
-          <img className="homeSection__img" src={imgHomeDois} />
+          <img alt="" className="homeSection__img" src={imgHomeDois} />
           <p className="homeSection__texto">Vocês no controle dos seus dados</p>
         </section>
       </Grow>
@@ -42,7 +42,7 @@ export const Home = () => {
         <p className="homeSection__texto">
           Acesse seus arquivos de qualquer lugar através do nosso aplicativo
         </p>
-        <img className="homeSection__img" src={imgHomeTres} />
+        <img alt="" className="homeSection__img" src={imgHomeTres} />
       </section>
 
       <section className="home__planos">

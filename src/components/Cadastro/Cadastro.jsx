@@ -9,7 +9,7 @@ export const Cadastro = () => {
     <section className="cadastro">
       <Grow in={true} timeout={1000}>
         <div className="cadastro__imgBg">
-          <img src={imgCadastro} className="cadastro__img" />
+          <img alt="" src={imgCadastro} className="cadastro__img" />
         </div>
       </Grow>
       <Grow in={true} timeout={1500}>

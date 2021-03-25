@@ -20,7 +20,7 @@ export const Upload = () => {
             <p className="homeC__inputTexto">
               Arraste e solte seus arquivos aqui...
             </p>
-            <img src={imgFiles} className="homeC__imgFiles" />
+            <img alt="" src={imgFiles} className="homeC__imgFiles" />
           </div>
         </div>
       </Grow>

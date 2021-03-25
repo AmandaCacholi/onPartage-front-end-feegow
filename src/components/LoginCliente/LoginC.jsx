@@ -11,7 +11,7 @@ export const LoginC = () => {
     <section className="loginC">
       <Grow in={true} timeout={1000}>
         <div className="loginC__imgBg">
-          <img src={imgLoginC} className="loginC__img" />
+          <img alt="" src={imgLoginC} className="loginC__img" />
         </div>
       </Grow>
       <Grow in={true} timeout={1500} >

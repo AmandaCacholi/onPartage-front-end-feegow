@@ -17,7 +17,7 @@ export const HomeFuncionario = () => {
     <section className="homeF">
       <Grow in={true} timeout={1000}>
         <div className="homeF__bgImg">
-          <img className="homeF__img" src={imgRoundLogo} />
+          <img alt="" className="homeF__img" src={imgRoundLogo} />
           <nav className="homeF__nav">
             <NavLink to="/area-funcionario/gerenciar-planos">
               <BtnAmareloPanel>Gerenciar Planos</BtnAmareloPanel>
