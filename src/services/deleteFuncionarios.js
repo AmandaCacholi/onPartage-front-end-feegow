@@ -1,6 +1,6 @@
-export const postPlanos = (dados) => {
-    fetch("https://onpartage-backend.herokuapp.com/plans", {
-        method: "POST",
+export const deleteFuncionarios = (id, dados) => {
+    fetch(`https://onpartage-backend.herokuapp.com/employees/${id}`, {
+        method: "DELETE",
         headers: {
             "Content-Type": "application/json",
         },
@@ -8,7 +8,7 @@ export const postPlanos = (dados) => {
     })
     .then((response) => response.json())
     .then((dados) => {
-        console.log("Enviado com sucesso", dados)
+        console.log("Excluído com sucesso", dados)
     })
     .catch((erro) => console.error("Erro: ", erro))
 }

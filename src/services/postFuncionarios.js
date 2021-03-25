@@ -1,5 +1,5 @@
 export const postFuncionarios = (dados) => {
-    fetch("http://localhost:8080/employees", {
+    fetch("https://onpartage-backend.herokuapp.com/employees", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

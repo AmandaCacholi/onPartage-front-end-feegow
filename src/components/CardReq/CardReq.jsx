@@ -1,5 +1,7 @@
 import React from "react";
 import "./CardReq.css";
+import imgDelete from "../../assets/images/delete.svg";
+import imgEdit from "../../assets/images/edit.svg";
 
 export const CardReq = (props) => {
   return (
@@ -28,6 +30,12 @@ export const CardReq = (props) => {
       <p className="cardReq__info">
         {props.tituloPlano} {props.plano}
       </p>
+      <div className="cardReq__flexImg" >
+        <div className="cardReq__imgWrapper">
+          <img className="cardReq__img" id={props.id} src={imgEdit} onDoubleClick={props.onClickModal} />
+          <img className="cardReq__img" id={props.id} src={imgDelete} onDoubleClick={props.onDoubleClickDelete} />
+        </div>
+      </div>
     </div>
   );
 };

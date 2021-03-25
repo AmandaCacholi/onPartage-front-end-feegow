@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { deleteClientes } from '../../services/deleteClientes'
 import { CardReq } from '../CardReq/CardReq'
 import './GerenciarClientes.css'
 
@@ -7,12 +8,17 @@ export const GerenciarClientes = () => {
     const [dadosClientes, setDadosClientes] = useState([])
 
     const req = async () => {
-        const response = await fetch("http://localhost:8080/costumers")
+        const response = await fetch("https://onpartage-backend.herokuapp.com/costumers")
         const dados = await response.json()
         setDadosClientes(dados)
     }
 
     useEffect(() => req(), [])
+
+    const handlerDoubleClickDelete = (e) => {
+        const idParam = e.target.id
+        deleteClientes(idParam)
+      }
 
     const clientes = dadosClientes.map((item, index) => (
         <CardReq
@@ -27,6 +33,7 @@ export const GerenciarClientes = () => {
             id={item._id}
             tituloDesde="Começou em: "
             desde={item.started}
+            onDoubleClickDelete={handlerDoubleClickDelete}
         />
     ))
 

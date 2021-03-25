@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import { BtnAzulHeader } from "../Button/Button";
 import {
   FormControl,
   Grow,
@@ -6,12 +9,10 @@ import {
   Select,
   TextField,
 } from "@material-ui/core";
-import "./CadastroPlanos.css";
-import React, { useState } from "react";
 import { BtnContato } from "../Button/Button";
 import { postPlanos } from "../../services/postPlanos";
 
-export const CadastroPlanos = () => {
+export const ModalPlan = (props) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [size, setSize] = useState("");
@@ -52,9 +53,19 @@ export const CadastroPlanos = () => {
 
   return (
     <>
-      <Grow in={true} timeout={1500}>
-        <section className="cadastroPlanos">
-          <h2 className="cadastroPlanos__titulo">Cadastro de Planos</h2>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        animation={true}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Atualizar Plano
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body >
           <form onSubmit={handlerSubmit} className="cadastroPlanos__form">
             <TextField
               name="name"
@@ -113,8 +124,11 @@ export const CadastroPlanos = () => {
             <br />
             <BtnContato type="submit">Cadastrar</BtnContato>
           </form>
-        </section>
-      </Grow>
+        </Modal.Body>
+        <Modal.Footer>
+          <BtnAzulHeader onClick={props.onHide}>Close</BtnAzulHeader>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };

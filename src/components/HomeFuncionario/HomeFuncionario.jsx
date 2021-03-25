@@ -10,6 +10,7 @@ import { CadastroFuncionario } from "../CadastroFuncionario/CadastroFuncionario"
 import { GerenciarPlanos } from "../GerenciarPlanos/GerenciarPlanos";
 import { GerenciarFuncionarios } from "../GerenciarFuncionarios/GerenciarFuncionarios";
 import { GerenciarClientes } from "../GerenciarClientes/GerenciarClientes";
+import { Teste } from "../Teste";
 
 export const HomeFuncionario = () => {
   return (
@@ -33,7 +34,9 @@ export const HomeFuncionario = () => {
             <NavLink to="/area-funcionario/cadastro-clientes" >
               <BtnAmareloPanel>Visualizar clientes</BtnAmareloPanel>
             </NavLink>
-            <BtnAmareloPanel>Configurações</BtnAmareloPanel>
+            <NavLink to="/area-funcionario/teste" >
+              <BtnAmareloPanel>Configurações</BtnAmareloPanel>
+            </NavLink>
           </nav>
         </div>
       </Grow>
@@ -53,6 +56,9 @@ export const HomeFuncionario = () => {
         </Route>
         <Route path="/area-funcionario/cadastro-clientes" >
           <GerenciarClientes/>
+        </Route>
+        <Route path="/area-funcionario/teste" >
+          <Teste></Teste>
         </Route>
       </Switch>
     </section>

@@ -1,4 +1,4 @@
-import { TextField, FormControlLabel, Switch, Grow } from "@material-ui/core";
+import { TextField, Switch, Grow } from "@material-ui/core";
 import React from "react";
 import { BtnContato } from "../Button/Button";
 import imgCadastro from "../../assets/images/cadastro.svg";
