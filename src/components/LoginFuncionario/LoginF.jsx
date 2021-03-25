@@ -24,7 +24,7 @@ export const LoginF = () => {
       </Grow>
       <Grow in={true} timeout={1000}>
         <div className="loginF__imgBg">
-          <img src={imgFuncionario} className="loginF__img" />
+          <img alt="" src={imgFuncionario} className="loginF__img" />
         </div>
       </Grow>
     </section>

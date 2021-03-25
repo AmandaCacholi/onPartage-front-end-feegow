@@ -9,11 +9,11 @@ export const Footer = () => {
     return (
         <footer>
             <nav>
-                <img className="footer__redes" src={instagram} />
-                <img className="footer__redes" src={facebook} />
-                <img className="footer__redes" src={twitter} />
+                <img alt="" className="footer__redes" src={instagram} />
+                <img alt="" className="footer__redes" src={facebook} />
+                <img alt="" className="footer__redes" src={twitter} />
             </nav>
-            <img className="footer__logo" src={logoBranco} />
+            <img alt="" className="footer__logo" src={logoBranco} />
         </footer>
     )
 }

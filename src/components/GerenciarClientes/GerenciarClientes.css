@@ -1,0 +1,22 @@
+.gerenciarClientes__titulo {
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--dark-blue);
+    margin: 60px 0 30px;
+    text-align: center;
+}
+
+.gerenciarClientes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .gerenciarClientes {
+        justify-content: center;
+    }
+}

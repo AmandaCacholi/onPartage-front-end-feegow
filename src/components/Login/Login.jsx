@@ -1,7 +1,6 @@
 import React from 'react'
 import './Login.css'
 import { TextField, Switch } from "@material-ui/core";
-import { BtnContato } from "../Button/Button";
 
 export const Login = (props) => {
     return (

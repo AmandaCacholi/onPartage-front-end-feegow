@@ -12,7 +12,7 @@ export const Header = (props) => {
       <Navbar collapseOnSelect expand="lg" className="navbar" sticky="top" >
         <NavLink to="/">
           <Navbar.Brand href="#home">
-            <img className="header__imagem" src={logo} />
+            <img alt="" className="header__imagem" src={logo} />
           </Navbar.Brand>
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

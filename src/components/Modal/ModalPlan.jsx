@@ -1,23 +1,21 @@
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 import {
   FormControl,
-  Grow,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@material-ui/core";
-import "./CadastroPlanos.css";
-import React, { useState } from "react";
 import { BtnContato } from "../Button/Button";
-import { postPlanos } from "../../services/postPlanos";
+import { putPlanos } from "../../services/putPlanos";
 
-export const CadastroPlanos = () => {
+export const ModalPlan = (props) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [size, setSize] = useState("");
   const [screens, setScreens] = useState("");
   const [type, setType] = useState("");
-  const [cadastroSucesso, setCadastroSucesso] = useState("")
 
   const dados = {
     name: name,
@@ -48,19 +46,27 @@ export const CadastroPlanos = () => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    postPlanos(dados);
     
-    setCadastroSucesso("Plano cadastrado com sucesso!")
+    putPlanos(dados);
   };
 
   return (
     <>
-      <Grow in={true} timeout={1500}>
-        <section className="cadastroPlanos">
-          <h2 className="cadastroPlanos__titulo">Cadastro de Planos</h2>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        animation={true}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Atualizar Plano
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body >
           <form onSubmit={handlerSubmit} className="cadastroPlanos__form">
             <TextField
-              required
               name="name"
               type="text"
               id="cadastroPlano__nome"
@@ -70,7 +76,6 @@ export const CadastroPlanos = () => {
               onChange={inputName}
             />
             <TextField
-              required
               name="price"
               type="number"
               id="cadastroPlano__preco"
@@ -80,7 +85,6 @@ export const CadastroPlanos = () => {
               onChange={inputPrice}
             />
             <TextField
-              required
               name="size"
               type="text"
               id="cadastroPlano__armazenamento"
@@ -90,7 +94,6 @@ export const CadastroPlanos = () => {
               onChange={inputSize}
             />
             <TextField
-              required
               name="screens"
               type="number"
               id="cadastroPlano__usuarios"
@@ -99,7 +102,7 @@ export const CadastroPlanos = () => {
               margin="normal"
               onChange={inputScreens}
             />
-            <FormControl required variant="outlined">
+            <FormControl require variant="outlined">
               <InputLabel id="demo-simple-select-outlined-label">
                 Tipo
               </InputLabel>
@@ -110,17 +113,18 @@ export const CadastroPlanos = () => {
                 onChange={inputType}
                 label="Tipo"
               >
-              
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
                 <MenuItem value={10}>Anual</MenuItem>
                 <MenuItem value={20}>Mensal</MenuItem>
               </Select>
             </FormControl>
             <br />
             <BtnContato type="submit">Cadastrar</BtnContato>
-            <small className="cadastroPlanos__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
-        </section>
-      </Grow>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };

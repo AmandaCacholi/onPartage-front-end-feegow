@@ -1,0 +1,22 @@
+.gerenciarPlanos__titulo {
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--dark-blue);
+    margin: 60px 0 30px;
+    text-align: center;
+}
+
+.gerenciarPlanos__cardPlanos {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .gerenciarPlanos__cardPlanos {
+        justify-content: center;
+    }
+}
