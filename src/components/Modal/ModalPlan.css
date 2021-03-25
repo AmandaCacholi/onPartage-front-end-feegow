@@ -1,0 +1,35 @@
+.updatePlanos__tituloWrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.updatePlanos__titulo {
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--dark-blue);
+    margin: 10px 0 10px 20px;
+    text-align: center;
+}
+  
+.updatePlanos__form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 20px;
+}
+
+.updatePlanos__cadastroSucesso {
+    font-family: var(--body-font);
+    font-weight: 500;
+    color: green;
+    margin: 5px;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+    .updatePlanos__form {
+        width: 90%;
+    }
+}

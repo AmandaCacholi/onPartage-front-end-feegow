@@ -1,85 +1,82 @@
+import React, { useEffect, useState } from "react";
+import Modal from "react-bootstrap/Modal";
 import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
   TextField,
   Switch,
-  Grow,
-  InputLabel,
-  Select,
-  MenuItem,
-  FormControl,
 } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
 import { BtnContato } from "../Button/Button";
-import imgCadastro from "../../assets/images/cadastro.svg";
 import { req } from "../../models/req-planos";
-import "./Cadastro.css";
-import { postCliente } from "../../services/postCliente";
+import "./ModalCliente.css";
 
-export const Cadastro = () => {
+export const ModalCliente = (props) => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [plan, setPlan] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [plan, setPlan] = useState("");
 
   const dados = {
     name: name,
     email: email,
     password: password,
-    plan: plan
-  }
+    plan: plan,
+  };
 
   const inputName = (e) => {
-    setName(e.target.value)
-  }
+    setName(e.target.value);
+  };
 
   const inputEmail = (e) => {
-    setEmail(e.target.value)
-  }
+    setEmail(e.target.value);
+  };
 
   const inputSenha = (e) => {
-    setPassword(e.target.value)
-  }
+    setPassword(e.target.value);
+  };
 
   const inputPlano = (e) => {
-    setPlan(e.target.value)
-  }
+    setPlan(e.target.value);
+  };
 
   const handlerSubmit = (e) => {
-    e.preventDefault()
-    postCliente(dados)
-  }
+    e.preventDefault();
+  };
 
   const reqPlanos = async () => {
-    const recebeReq = await req()
-    setDadosPlanos(recebeReq)
-  }
+    const recebeReq = await req();
+    setDadosPlanos(recebeReq);
+  };
 
   useEffect(() => reqPlanos(), [dadosPlanos]);
 
   const nomePlanos = dadosPlanos.map((item, index) => (
-    <MenuItem value={item.name}>{item.name} - R$ {item.price}/mês</MenuItem>
+    <MenuItem value={item.name}>
+      {item.name} - R$ {item.price}/mês
+    </MenuItem>
   ));
 
   return (
-    <section className="cadastro">
-      <Grow in={true} timeout={1000}>
-        <div className="cadastro__imgBg">
-          <img alt="" src={imgCadastro} className="cadastro__img" />
-        </div>
-      </Grow>
-      <Grow in={true} timeout={1500}>
-        <div className="cadastro__formWrapper">
-          <h2 className="cadastro__titulo">
-            Crie sua conta <span>grátis</span>
-          </h2>
-          <p className="cadastro__subtitulo">
-            Já possui conta? <span>Acesse</span>
-          </p>
-          <form onSubmit={handlerSubmit} className="cadastro__form">
+    <>
+      <Modal
+        {...props}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <div className="updateCliente__tituloWrapper">
+            <h2 className="updateCliente__titulo">Atualizar Cliente</h2>
+          </div>
+        </Modal.Header>
+        <Modal.Body>
+          <form onSubmit={handlerSubmit} className="updateCliente__form">
             <TextField
               required
-              id="cadastro__nome"
+              id="updateCliente__nome"
               label="Nome"
               variant="outlined"
               margin="normal"
@@ -88,7 +85,7 @@ export const Cadastro = () => {
             <TextField
               required
               type="email"
-              id="cadastro__email"
+              id="updateCliente__email"
               label="Email"
               variant="outlined"
               margin="normal"
@@ -97,7 +94,7 @@ export const Cadastro = () => {
             <TextField
               required
               type="password"
-              id="cadastro__senha"
+              id="updateCliente__senha"
               label="Senha"
               variant="outlined"
               margin="normal"
@@ -106,13 +103,15 @@ export const Cadastro = () => {
             <TextField
               required
               type="password"
-              id="cadastro__senhaDois"
+              id="updateCliente__senhaDois"
               label="Digite a senha novamente"
               variant="outlined"
               margin="normal"
             />
             <FormControl required variant="outlined" margin="normal">
-              <InputLabel id="demo-simple-select-outlined-label">Escolha um plano</InputLabel>
+              <InputLabel id="demo-simple-select-outlined-label">
+                Escolha um plano
+              </InputLabel>
               <Select
                 labelId="demo-simple-select-outlined-label"
                 id="demo-simple-select-outlined"
@@ -123,16 +122,16 @@ export const Cadastro = () => {
                 {nomePlanos}
               </Select>
             </FormControl>
-            <div className="cadastro__termos">
+            <div className="updateCliente__termos">
               <Switch required name="termo" color="primary" required={true} />
-              <p className="cadastro__termosTexto">
+              <p className="updateCliente__termosTexto">
                 Concordo com os <span>Termos de Serviço</span> da onPartage
               </p>
             </div>
-            <BtnContato type="submit" >Criar conta</BtnContato>
+            <BtnContato type="submit">Criar conta</BtnContato>
           </form>
-        </div>
-      </Grow>
-    </section>
+        </Modal.Body>
+      </Modal>
+    </>
   );
 };

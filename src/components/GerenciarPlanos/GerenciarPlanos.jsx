@@ -4,20 +4,18 @@ import "./GerenciarPlanos.css";
 import { deletePlanos } from "../../services/deletePlanos";
 import { ModalPlan } from "../Modal/ModalPlan";
 import { Grow } from "@material-ui/core";
+import { req } from "../../models/req-planos";
 
 export const GerenciarPlanos = () => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
   const [modalShow, setModalShow] = useState(false);
 
-  const req = async () => {
-    const response = await fetch(
-      "https://onpartage-backend.herokuapp.com/plans"
-    );
-    const dados = await response.json();
-    setDadosPlanos(dados);
-  };
+  const reqPlanos = async () => {
+    const recebeReq = await req()
+    setDadosPlanos(recebeReq)
+  }
 
-  useEffect(() => req(), [dadosPlanos]);
+  useEffect(() => reqPlanos(), [dadosPlanos]);
 
   const handlerDoubleClickDelete = (e) => {
     const idParam = e.target.id;
@@ -27,7 +25,7 @@ export const GerenciarPlanos = () => {
   const handlerClickModal = (e) => {
     const idPlano = e.target.id;
     setModalShow(true);
-    return idPlano;
+    
   };
 
   const planos = dadosPlanos.map((item, index) => (
@@ -43,6 +41,7 @@ export const GerenciarPlanos = () => {
       usuarios={item.screens}
       tituloid="ID: "
       id={item._id}
+      tituloTipoPlano="Tipo: "
       onDoubleClickDelete={handlerDoubleClickDelete}
       onClickModal={handlerClickModal}
     />

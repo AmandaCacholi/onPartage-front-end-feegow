@@ -29,7 +29,6 @@ export const Planos = (props) => {
             <td className="planos__preco">
               <p className="planos__periodo">Anualmente:</p>
               {props.precoAnual}
-              <p className="planos__usuarios">{props.porUsuario}</p>
             </td>
           </tr>
           <tr>

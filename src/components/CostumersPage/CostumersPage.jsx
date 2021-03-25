@@ -6,6 +6,7 @@ import { Grow } from "@material-ui/core";
 import { Route, Switch } from "react-router";
 import { Upload } from "../HomeCliente__Upload/Upload";
 import { NavLink } from "react-router-dom";
+import { InfoConta } from "../InfoConta/InfoConta";
 
 export default function clientPage() {
   return (
@@ -17,7 +18,9 @@ export default function clientPage() {
             <NavLink to="/area-cliente/upload">
               <BtnAmareloPanel>Enviar arquivos</BtnAmareloPanel>
             </NavLink>
-            <BtnAmareloPanel>Informações da conta</BtnAmareloPanel>
+            <NavLink to="/area-cliente/informacoes-conta" >
+              <BtnAmareloPanel>Informações da conta</BtnAmareloPanel>
+            </NavLink>
             <BtnAmareloPanel>Mudar plano</BtnAmareloPanel>
             <BtnAmareloPanel>Sair</BtnAmareloPanel>
           </nav>
@@ -27,6 +30,9 @@ export default function clientPage() {
       <Switch>
         <Route path="/area-cliente/upload">
           <Upload />
+        </Route>
+        <Route path="/area-cliente/informacoes-conta" >
+          <InfoConta/>
         </Route>
       </Switch>
     </section>

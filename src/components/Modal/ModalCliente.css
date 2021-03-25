@@ -1,0 +1,47 @@
+.updateCliente__tituloWrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.updateCliente__titulo {
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--dark-blue);
+    margin: 10px 0 10px 20px;
+    text-align: center;
+}
+
+.updateCliente__form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.updateCliente__termos {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+}
+
+.updateCliente__termosTexto {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.updateCliente__termosTexto span {
+    font-weight: 600;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* ------------------ Responsividade */
+
+@media (max-width: 995px) {
+
+    .updateCliente__form {
+        width: 90%;
+    }
+}

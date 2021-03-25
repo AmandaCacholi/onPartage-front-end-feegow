@@ -14,11 +14,11 @@ import "./Home.css";
 export const Home = () => {
   return (
     <>
-    
-
-      <h2 className="home__titulo">
-        Armazenamento em nuvem com segurança e privacidade
-      </h2>
+      <Grow in={true} timeout={500}>
+        <h2 className="home__titulo">
+          Armazenamento em nuvem com segurança e privacidade
+        </h2>
+      </Grow>
       <Grow in={true} timeout={1000}>
         <section className="homeSection">
           <div className="homeSection__textoWrapper">
@@ -52,34 +52,33 @@ export const Home = () => {
             nomePlano="Bronze"
             infoUm="1 usuário"
             infoDois="2TB (2.000GB)"
-            precoMensal="R$ 69,99/mês"
+            precoMensal="R$ 70/mês"
             precoAnual="R$ 65/mês"
           />
           <Planos
             nomePlano="Silver"
             infoUm="6 usuários"
             infoDois="3TB (3.000GB)"
-            precoMensal="R$ 99,99/mês"
+            precoMensal="R$ 100/mês"
             precoAnual="R$ 95/mês"
           />
           <Planos
             nomePlano="Gold"
             infoUm="Mais de 3 usuários"
             infoDois="5TB (5.000GB)"
-            precoMensal="R$ 79,99/mês"
-            precoAnual="R$ 75/mês"
-            porUsuario="por usuário"
+            precoMensal="R$ 150/mês"
+            precoAnual="R$ 145/mês"
           />
         </div>
       </section>
 
       <section className="home__sobre">
-        <Titulo id="sobre" >Quem Somos</Titulo>
+        <Titulo id="sobre">Quem Somos</Titulo>
         <Sobre />
       </section>
 
       <section className="home__contato">
-        <Titulo id="contato" >Contato</Titulo>
+        <Titulo id="contato">Contato</Titulo>
         <Contato />
       </section>
 

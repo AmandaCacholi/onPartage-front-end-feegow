@@ -3,19 +3,17 @@ import { CardReq } from "../CardReq/CardReq";
 import "./GerenciarFuncionarios.css";
 import { deleteFuncionarios } from "../../services/deleteFuncionarios";
 import { Grow } from "@material-ui/core";
+import { req } from "../../models/req-funcionarios";
 
 export const GerenciarFuncionarios = () => {
   const [dadosFuncionarios, setDadosFuncionarios] = useState([]);
+  
+  const reqFuncionarios = async () => {
+    const recebeReq = await req()
+    setDadosFuncionarios(recebeReq)
+  }
 
-  const req = async () => {
-    const response = await fetch(
-      "https://onpartage-backend.herokuapp.com/employees"
-    );
-    const dados = await response.json();
-    setDadosFuncionarios(dados);
-  };
-
-  useEffect(() => req(), [dadosFuncionarios]);
+  useEffect(() => reqFuncionarios(), [dadosFuncionarios]);
 
   const handlerDoubleClickDelete = (e) => {
     const idParam = e.target.id;
