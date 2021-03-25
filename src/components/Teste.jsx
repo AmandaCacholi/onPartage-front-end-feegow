@@ -5,17 +5,14 @@ export const Teste = () => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
 
   const req = async () => {
-    const response = await fetch("http://localhost:8080/plans");
+    const response = await fetch("https://onpartage-backend.herokuapp.com/plans");
     const dados = await response.json();
     setDadosPlanos(dados);
   };
 
   useEffect(() => req(), []);
 
-  const nomePlanos = dadosPlanos.map((item, index) => {
-    // <MenuItem key={index} >{item.name}</MenuItem>
-    <li>{item.nome}</li>
-  })
+  const nomePlanos = dadosPlanos.map((item, index) => <MenuItem>{item.name}</MenuItem>)
 
   return (
     <div>
@@ -25,12 +22,9 @@ export const Teste = () => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
         >
-          {/* {nomePlanos} */}
+          {nomePlanos}
         </Select>
       </FormControl>
-      <ul>
-          {nomePlanos}
-      </ul>
     </div>
   );
 };

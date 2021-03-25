@@ -40,6 +40,7 @@ export const CadastroFuncionario = () => {
           <h2 className="cadastroFuncionario__titulo">Cadastro de Funcionários</h2>
           <form onSubmit={handlerSubmit} className="cadastroFuncionario__form">
             <TextField
+              required
               type="text"
               id="cadastroFuncionario__nome"
               label="Nome"
@@ -48,6 +49,7 @@ export const CadastroFuncionario = () => {
               onChange={inputName}
             />
             <TextField
+              required
               type="email"
               id="cadastroFuncionario__email"
               label="Email"
@@ -56,6 +58,7 @@ export const CadastroFuncionario = () => {
               onChange={inputEmail}
             />
             <TextField
+              required
               type="password"
               id="cadastroFuncionario__senha"
               label="Senha"

@@ -17,6 +17,7 @@ export const CadastroPlanos = () => {
   const [size, setSize] = useState("");
   const [screens, setScreens] = useState("");
   const [type, setType] = useState("");
+  const [cadastroSucesso, setCadastroSucesso] = useState("")
 
   const dados = {
     name: name,
@@ -48,6 +49,8 @@ export const CadastroPlanos = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     postPlanos(dados);
+    
+    setCadastroSucesso("Plano cadastrado com sucesso!")
   };
 
   return (
@@ -57,6 +60,7 @@ export const CadastroPlanos = () => {
           <h2 className="cadastroPlanos__titulo">Cadastro de Planos</h2>
           <form onSubmit={handlerSubmit} className="cadastroPlanos__form">
             <TextField
+              required
               name="name"
               type="text"
               id="cadastroPlano__nome"
@@ -66,6 +70,7 @@ export const CadastroPlanos = () => {
               onChange={inputName}
             />
             <TextField
+              required
               name="price"
               type="number"
               id="cadastroPlano__preco"
@@ -75,6 +80,7 @@ export const CadastroPlanos = () => {
               onChange={inputPrice}
             />
             <TextField
+              required
               name="size"
               type="text"
               id="cadastroPlano__armazenamento"
@@ -84,6 +90,7 @@ export const CadastroPlanos = () => {
               onChange={inputSize}
             />
             <TextField
+              required
               name="screens"
               type="number"
               id="cadastroPlano__usuarios"
@@ -92,7 +99,7 @@ export const CadastroPlanos = () => {
               margin="normal"
               onChange={inputScreens}
             />
-            <FormControl require variant="outlined">
+            <FormControl required variant="outlined">
               <InputLabel id="demo-simple-select-outlined-label">
                 Tipo
               </InputLabel>
@@ -103,15 +110,14 @@ export const CadastroPlanos = () => {
                 onChange={inputType}
                 label="Tipo"
               >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
+              
                 <MenuItem value={10}>Anual</MenuItem>
                 <MenuItem value={20}>Mensal</MenuItem>
               </Select>
             </FormControl>
             <br />
             <BtnContato type="submit">Cadastrar</BtnContato>
+            <small className="cadastroPlanos__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
         </section>
       </Grow>

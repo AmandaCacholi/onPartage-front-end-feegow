@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import { BtnAzulHeader } from "../Button/Button";
 import {
   FormControl,
   InputLabel,
@@ -9,7 +8,7 @@ import {
   TextField,
 } from "@material-ui/core";
 import { BtnContato } from "../Button/Button";
-import { postPlanos } from "../../services/postPlanos";
+import { putPlanos } from "../../services/putPlanos";
 
 export const ModalPlan = (props) => {
   const [name, setName] = useState("");
@@ -47,7 +46,8 @@ export const ModalPlan = (props) => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    postPlanos(dados);
+    
+    putPlanos(dados);
   };
 
   return (
@@ -124,9 +124,6 @@ export const ModalPlan = (props) => {
             <BtnContato type="submit">Cadastrar</BtnContato>
           </form>
         </Modal.Body>
-        <Modal.Footer>
-          <BtnAzulHeader onClick={props.onHide}>Close</BtnAzulHeader>
-        </Modal.Footer>
       </Modal>
     </>
   );
