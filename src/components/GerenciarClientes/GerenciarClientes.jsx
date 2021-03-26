@@ -8,6 +8,7 @@ import "./GerenciarClientes.css";
 export const GerenciarClientes = () => {
   const [dadosClientes, setDadosClientes] = useState([]);
   const [modalShow, setModalShow] = useState(false);
+  const [id, setId] = useState("")
 
   const req = async () => {
     const response = await fetch(
@@ -25,7 +26,7 @@ export const GerenciarClientes = () => {
   };
 
   const handlerClickModal = (e) => {
-    const idPlano = e.target.id;
+    setId(e.target.id);
     setModalShow(true);
   };
 
@@ -54,7 +55,7 @@ export const GerenciarClientes = () => {
           <h2 className="gerenciarClientes__titulo">Clientes cadastrados</h2>
           <div className="gerenciarClientes">{clientes}</div>
 
-          <ModalCliente show={modalShow} onHide={() => setModalShow(false)} />
+          <ModalCliente id={id} show={modalShow} onHide={() => setModalShow(false)} />
         </section>
       </Grow>
     </>

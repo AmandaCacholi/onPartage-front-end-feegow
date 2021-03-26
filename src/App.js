@@ -28,7 +28,7 @@ function App() {
             <LoginC />
           </Route>
 
-          <Route path="/cadastro-cliente">
+          <Route path="/cadastro-cliente/">
             <Cadastro />
           </Route>
           <Route path="/area-cliente/">

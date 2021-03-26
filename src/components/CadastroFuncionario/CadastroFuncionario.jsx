@@ -10,6 +10,8 @@ export const CadastroFuncionario = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  const [cadastroSucesso, setCadastroSucesso] = useState("")
+
   const dados = {
     name: name,
     email: email,
@@ -31,6 +33,7 @@ export const CadastroFuncionario = () => {
   const handlerSubmit = (e) => {
     e.preventDefault()
     postFuncionarios(dados)
+    setCadastroSucesso("Cadastrado com sucesso!")
   }
 
   return (
@@ -68,6 +71,7 @@ export const CadastroFuncionario = () => {
             />
             <br />
             <BtnContato type="submit" >Cadastrar</BtnContato>
+            <small className="cadastroPlanos__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
         </section>
       </Grow>

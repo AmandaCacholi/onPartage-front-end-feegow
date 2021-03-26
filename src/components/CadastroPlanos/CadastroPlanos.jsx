@@ -50,7 +50,7 @@ export const CadastroPlanos = () => {
     e.preventDefault();
     postPlanos(dados);
     
-    setCadastroSucesso("Plano cadastrado com sucesso!")
+    setCadastroSucesso("Cadastrado com sucesso!")
   };
 
   return (

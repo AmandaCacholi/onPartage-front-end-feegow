@@ -6,11 +6,11 @@ import {
   MenuItem,
   Select,
   TextField,
-  Switch,
 } from "@material-ui/core";
 import { BtnContato } from "../Button/Button";
 import { req } from "../../models/req-planos";
 import "./ModalCliente.css";
+import { putClientes } from '../../services/putCliente'
 
 export const ModalCliente = (props) => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
@@ -19,6 +19,8 @@ export const ModalCliente = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [plan, setPlan] = useState("");
+
+  const [cadastroSucesso, setCadastroSucesso] = useState("")
 
   const dados = {
     name: name,
@@ -45,6 +47,10 @@ export const ModalCliente = (props) => {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
+
+    putClientes(props.id, dados)
+
+    setCadastroSucesso("Atualizado com sucesso!")
   };
 
   const reqPlanos = async () => {
@@ -122,13 +128,8 @@ export const ModalCliente = (props) => {
                 {nomePlanos}
               </Select>
             </FormControl>
-            <div className="updateCliente__termos">
-              <Switch required name="termo" color="primary" required={true} />
-              <p className="updateCliente__termosTexto">
-                Concordo com os <span>Termos de Serviço</span> da onPartage
-              </p>
-            </div>
-            <BtnContato type="submit">Criar conta</BtnContato>
+            <BtnContato type="submit">Atualizar</BtnContato>
+            <small className="cadastroPlanos__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
         </Modal.Body>
       </Modal>

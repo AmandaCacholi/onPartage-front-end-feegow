@@ -5,7 +5,6 @@ import { deletePlanos } from "../../services/deletePlanos";
 import { ModalPlan } from "../Modal/ModalPlan";
 import { Grow } from "@material-ui/core";
 import { req } from "../../models/req-planos";
-import { Route, Switch } from "react-router";
 
 export const GerenciarPlanos = () => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
@@ -31,6 +30,7 @@ export const GerenciarPlanos = () => {
 
   const planos = dadosPlanos.map((item, index) => (
     <CardReq
+      key="index"
       tituloNome="Nome: "
       nome={item.name}
       tituloPreco="Preço mensal: R$"

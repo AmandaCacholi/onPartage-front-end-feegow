@@ -13,6 +13,8 @@ import imgCadastro from "../../assets/images/cadastro.svg";
 import { req } from "../../models/req-planos";
 import "./Cadastro.css";
 import { postCliente } from "../../services/postCliente";
+import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Cadastro = () => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
@@ -48,6 +50,7 @@ export const Cadastro = () => {
   const handlerSubmit = (e) => {
     e.preventDefault()
     postCliente(dados)
+    
   }
 
   const reqPlanos = async () => {
@@ -74,7 +77,10 @@ export const Cadastro = () => {
             Crie sua conta <span>grátis</span>
           </h2>
           <p className="cadastro__subtitulo">
-            Já possui conta? <span>Acesse</span>
+            Já possui conta? 
+            <Link to="/login-cliente">
+              <span> Acesse</span>
+            </Link>
           </p>
           <form onSubmit={handlerSubmit} className="cadastro__form">
             <TextField
@@ -129,7 +135,7 @@ export const Cadastro = () => {
                 Concordo com os <span>Termos de Serviço</span> da onPartage
               </p>
             </div>
-            <BtnContato type="submit" >Criar conta</BtnContato>
+              <BtnContato type="submit" >Criar conta</BtnContato>
           </form>
         </div>
       </Grow>

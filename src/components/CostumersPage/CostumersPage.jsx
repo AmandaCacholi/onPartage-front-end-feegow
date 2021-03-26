@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router";
 import { Upload } from "../HomeCliente__Upload/Upload";
 import { NavLink } from "react-router-dom";
 import { InfoConta } from "../InfoConta/InfoConta";
+import { PlanosDispo } from "../PlanosDispo/PlanosDispo";
 
 export default function clientPage() {
   return (
@@ -21,7 +22,9 @@ export default function clientPage() {
             <NavLink to="/area-cliente/informacoes-conta" >
               <BtnAmareloPanel>Informações da conta</BtnAmareloPanel>
             </NavLink>
-            <BtnAmareloPanel>Mudar plano</BtnAmareloPanel>
+            <NavLink to="/area-cliente/planos-disponiveis" >
+              <BtnAmareloPanel>Planos Disponíveis</BtnAmareloPanel>
+            </NavLink>
             <BtnAmareloPanel>Sair</BtnAmareloPanel>
           </nav>
         </div>
@@ -33,6 +36,9 @@ export default function clientPage() {
         </Route>
         <Route path="/area-cliente/informacoes-conta" >
           <InfoConta/>
+        </Route >
+        <Route path="/area-cliente/planos-disponiveis" >
+          <PlanosDispo/>
         </Route>
       </Switch>
     </section>
