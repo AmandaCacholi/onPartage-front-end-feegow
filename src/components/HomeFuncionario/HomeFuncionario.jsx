@@ -34,9 +34,8 @@ export const HomeFuncionario = () => {
             <NavLink to="/area-funcionario/cadastro-clientes" >
               <BtnAmareloPanel>Visualizar clientes</BtnAmareloPanel>
             </NavLink>
-            <NavLink to="/area-funcionario/teste" >
               <BtnAmareloPanel>Configurações</BtnAmareloPanel>
-            </NavLink>
+            
           </nav>
         </div>
       </Grow>
@@ -56,9 +55,6 @@ export const HomeFuncionario = () => {
         </Route>
         <Route path="/area-funcionario/cadastro-clientes" >
           <GerenciarClientes/>
-        </Route>
-        <Route path="/area-funcionario/teste" >
-          <Teste></Teste>
         </Route>
       </Switch>
     </section>
