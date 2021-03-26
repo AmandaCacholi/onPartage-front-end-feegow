@@ -10,11 +10,12 @@
   flex-direction: column;
   background: linear-gradient(#110066, #0A003F);
   align-items: center;
-  justify-content: space-evenly;
+  justify-content:first baseline;
 }
 
 .homeC__img {
   width: 75px;
+  margin: 20px 0 20px;
 }
 
 .homeC__btnMenu {

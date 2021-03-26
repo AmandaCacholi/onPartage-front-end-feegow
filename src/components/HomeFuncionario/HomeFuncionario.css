@@ -7,14 +7,14 @@
     background: linear-gradient(#110066, #0A003F);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:first baseline;
     align-items: center;
     padding: 20px 0;
 }
 
 .homeF__img {
     width: 75px;
-    margin: 0 0 10px;
+    margin: 20px 0 20px;
 }
 
 .homeF__nav {
