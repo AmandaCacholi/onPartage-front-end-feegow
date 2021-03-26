@@ -1,0 +1,33 @@
+.planosTable__table {
+    width: 30%;
+    margin: 50px 10px;
+}
+
+.planosTable__thead {
+    text-align: center;
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--dark-blue);
+    border: #d6d6d6 solid 1px;
+    padding: 20px 10px;
+    vertical-align: middle;
+    background: var(--primary-yellow);
+}
+
+.planosTable__info {
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-size: 25px;
+    color: black;
+    border: rgb(214, 214, 214) solid 1px;
+    padding: 20px 20px;
+    vertical-align: middle;
+}
+
+@media (max-width: 995px) {
+
+    .planosTable__table {
+        width: 90%;
+    }
+}
