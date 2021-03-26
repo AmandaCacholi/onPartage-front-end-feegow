@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { BtnContato } from "../Button/Button";
 import { putPlanos } from "../../services/putPlanos";
+import './ModalPlan.css'
 
 export const ModalPlan = (props) => {
   const [name, setName] = useState("");
@@ -16,6 +17,8 @@ export const ModalPlan = (props) => {
   const [size, setSize] = useState("");
   const [screens, setScreens] = useState("");
   const [type, setType] = useState("");
+
+  const [cadastroSucesso, setCadastroSucesso] = useState("")
 
   const dados = {
     name: name,
@@ -47,62 +50,68 @@ export const ModalPlan = (props) => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     
-    putPlanos(dados);
+    putPlanos(props.id, dados);
+
+    setCadastroSucesso("Atualizado com sucesso!")
   };
 
   return (
     <>
       <Modal
         {...props}
-        size="lg"
+        
         aria-labelledby="contained-modal-title-vcenter"
         centered
         animation={true}
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Atualizar Plano
-          </Modal.Title>
+          <div className="updatePlanos__tituloWrapper" >
+            <h2 className="updatePlanos__titulo" >Atualizar Plano</h2>
+          </div>
         </Modal.Header>
         <Modal.Body >
-          <form onSubmit={handlerSubmit} className="cadastroPlanos__form">
+          <form onSubmit={handlerSubmit} className="updatePlanos__form">
             <TextField
+              required
               name="name"
               type="text"
-              id="cadastroPlano__nome"
+              id="updatePlanos__nome"
               label="Nome"
               variant="outlined"
               margin="normal"
               onChange={inputName}
             />
             <TextField
+              required
               name="price"
               type="number"
-              id="cadastroPlano__preco"
+              id="updatePlanos__preco"
               label="Preço"
               variant="outlined"
               margin="normal"
               onChange={inputPrice}
             />
             <TextField
+              required
               name="size"
               type="text"
-              id="cadastroPlano__armazenamento"
+              id="updatePlanos__armazenamento"
               label="Armazenamento"
               variant="outlined"
               margin="normal"
               onChange={inputSize}
             />
             <TextField
+              required
               name="screens"
               type="number"
-              id="cadastroPlano__usuarios"
+              id="updatePlanos__usuarios"
               label="Quantidade de Usuários"
               variant="outlined"
               margin="normal"
               onChange={inputScreens}
             />
-            <FormControl require variant="outlined">
+            <FormControl required variant="outlined">
               <InputLabel id="demo-simple-select-outlined-label">
                 Tipo
               </InputLabel>
@@ -121,7 +130,8 @@ export const ModalPlan = (props) => {
               </Select>
             </FormControl>
             <br />
-            <BtnContato type="submit">Cadastrar</BtnContato>
+            <BtnContato type="submit">Atualizar</BtnContato>
+            <small className="cadastroPlanos__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
         </Modal.Body>
       </Modal>

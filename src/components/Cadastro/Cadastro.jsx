@@ -10,9 +10,11 @@ import {
 import React, { useEffect, useState } from "react";
 import { BtnContato } from "../Button/Button";
 import imgCadastro from "../../assets/images/cadastro.svg";
-
+import { req } from "../../models/req-planos";
 import "./Cadastro.css";
 import { postCliente } from "../../services/postCliente";
+import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Cadastro = () => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
@@ -48,17 +50,15 @@ export const Cadastro = () => {
   const handlerSubmit = (e) => {
     e.preventDefault()
     postCliente(dados)
+    
   }
 
-  const req = async () => {
-    const response = await fetch(
-      "https://onpartage-backend.herokuapp.com/plans"
-    );
-    const dados = await response.json();
-    setDadosPlanos(dados);
-  };
+  const reqPlanos = async () => {
+    const recebeReq = await req()
+    setDadosPlanos(recebeReq)
+  }
 
-  useEffect(() => req(), []);
+  useEffect(() => reqPlanos(), [dadosPlanos]);
 
   const nomePlanos = dadosPlanos.map((item, index) => (
     <MenuItem value={item.name}>{item.name} - R$ {item.price}/mês</MenuItem>
@@ -77,7 +77,10 @@ export const Cadastro = () => {
             Crie sua conta <span>grátis</span>
           </h2>
           <p className="cadastro__subtitulo">
-            Já possui conta? <span>Acesse</span>
+            Já possui conta? 
+            <Link to="/login-cliente">
+              <span> Acesse</span>
+            </Link>
           </p>
           <form onSubmit={handlerSubmit} className="cadastro__form">
             <TextField
@@ -132,7 +135,7 @@ export const Cadastro = () => {
                 Concordo com os <span>Termos de Serviço</span> da onPartage
               </p>
             </div>
-            <BtnContato type="submit" >Criar conta</BtnContato>
+              <BtnContato type="submit" >Criar conta</BtnContato>
           </form>
         </div>
       </Grow>

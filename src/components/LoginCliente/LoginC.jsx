@@ -25,7 +25,7 @@ export const LoginC = () => {
           </p>
           <div className="loginC__form">
             <Login type="email" id="loginC__id" label="Email" />
-            <Link className="loginC__btn" to="/area-cliente">
+            <Link className="loginC__btn" to="/area-cliente/upload">
               <BtnContato>Entrar</BtnContato>
             </Link>
           </div>

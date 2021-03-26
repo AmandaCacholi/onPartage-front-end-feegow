@@ -13,6 +13,13 @@
     margin: 0 auto;
 }
 
+.contato__msgEnviada {
+    font-family: var(--body-font);
+    font-weight: 500;
+    color: green;
+    margin: 5px;
+}
+
 /* ------------------ Responsividade */
 
 @media (max-width: 995px) {

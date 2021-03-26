@@ -17,7 +17,7 @@ export const LoginF = () => {
       <Grow in={true} timeout={1500}>
         <div className="loginF__form">
           <Login type="text" id="loginF__id" label="ID do Funcionário" />
-          <Link className="loginF__btn" to="area-funcionario">
+          <Link className="loginF__btn" to="/area-funcionario/gerenciar-planos">
             <BtnContato>Entrar</BtnContato>
           </Link>
         </div>
