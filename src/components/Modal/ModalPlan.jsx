@@ -50,7 +50,7 @@ export const ModalPlan = (props) => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     
-    putPlanos(dados);
+    putPlanos(props.id, dados);
 
     setCadastroSucesso("Atualizado com sucesso!")
   };

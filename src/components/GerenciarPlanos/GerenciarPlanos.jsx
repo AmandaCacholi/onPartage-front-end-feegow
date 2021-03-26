@@ -5,10 +5,12 @@ import { deletePlanos } from "../../services/deletePlanos";
 import { ModalPlan } from "../Modal/ModalPlan";
 import { Grow } from "@material-ui/core";
 import { req } from "../../models/req-planos";
+import { Route, Switch } from "react-router";
 
 export const GerenciarPlanos = () => {
   const [dadosPlanos, setDadosPlanos] = useState([]);
   const [modalShow, setModalShow] = useState(false);
+  const [id, setId] = useState("")
 
   const reqPlanos = async () => {
     const recebeReq = await req()
@@ -23,14 +25,12 @@ export const GerenciarPlanos = () => {
   };
 
   const handlerClickModal = (e) => {
-    const idPlano = e.target.id;
+    setId(e.target.id);
     setModalShow(true);
-    
   };
 
   const planos = dadosPlanos.map((item, index) => (
     <CardReq
-      key={index}
       tituloNome="Nome: "
       nome={item.name}
       tituloPreco="Preço mensal: R$"
@@ -54,13 +54,15 @@ export const GerenciarPlanos = () => {
           <h2 className="gerenciarPlanos__titulo">Planos cadastrados</h2>
           <div className="gerenciarPlanos__cardPlanos">{planos}</div>
 
-          <ModalPlan
-            id={handlerClickModal}
+        <ModalPlan
+            id={id}
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
+          
         </section>
       </Grow>
+
     </>
   );
 };
