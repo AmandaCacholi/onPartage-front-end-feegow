@@ -23,6 +23,7 @@ export const Cadastro = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [plan, setPlan] = useState("")
+  const [cadastroSucesso, setCadastroSucesso] = useState("")
 
   const dados = {
     name: name,
@@ -50,7 +51,8 @@ export const Cadastro = () => {
   const handlerSubmit = (e) => {
     e.preventDefault()
     postCliente(dados)
-    
+
+    setCadastroSucesso("Cadastrado com sucesso!")
   }
 
   const reqPlanos = async () => {
@@ -136,6 +138,7 @@ export const Cadastro = () => {
               </p>
             </div>
               <BtnContato type="submit" >Criar conta</BtnContato>
+              <small className="cadastro__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
         </div>
       </Grow>
