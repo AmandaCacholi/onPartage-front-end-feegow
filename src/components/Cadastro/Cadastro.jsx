@@ -13,7 +13,6 @@ import imgCadastro from "../../assets/images/cadastro.svg";
 import { req } from "../../models/req-planos";
 import "./Cadastro.css";
 import { postCliente } from "../../services/postCliente";
-import { NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const Cadastro = () => {
@@ -132,7 +131,7 @@ export const Cadastro = () => {
               </Select>
             </FormControl>
             <div className="cadastro__termos">
-              <Switch required name="termo" color="primary" required={true} />
+              <Switch required name="termo" color="primary"/>
               <p className="cadastro__termosTexto">
                 Concordo com os <span>Termos de Serviço</span> da onPartage
               </p>

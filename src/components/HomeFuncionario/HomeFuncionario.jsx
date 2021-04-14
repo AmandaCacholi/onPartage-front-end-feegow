@@ -10,7 +10,6 @@ import { CadastroFuncionario } from "../CadastroFuncionario/CadastroFuncionario"
 import { GerenciarPlanos } from "../GerenciarPlanos/GerenciarPlanos";
 import { GerenciarFuncionarios } from "../GerenciarFuncionarios/GerenciarFuncionarios";
 import { GerenciarClientes } from "../GerenciarClientes/GerenciarClientes";
-import { Teste } from "../Teste";
 
 export const HomeFuncionario = () => {
   return (
