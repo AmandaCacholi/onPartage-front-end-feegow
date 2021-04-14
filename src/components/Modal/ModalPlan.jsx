@@ -122,9 +122,6 @@ export const ModalPlan = (props) => {
                 onChange={inputType}
                 label="Tipo"
               >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
                 <MenuItem value={10}>Anual</MenuItem>
                 <MenuItem value={20}>Mensal</MenuItem>
               </Select>
