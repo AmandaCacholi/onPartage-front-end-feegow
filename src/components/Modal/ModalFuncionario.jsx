@@ -80,7 +80,7 @@ export const ModalFuncionario = (props) => {
               onChange={inputSenha}
             />
             <br />
-            <BtnContato type="submit">Cadastrar</BtnContato>
+            <BtnContato type="submit">Atualizar</BtnContato>
             <small className="cadastroPlanos__cadastroSucesso" >{cadastroSucesso}</small>
           </form>
         </Modal.Body>

@@ -53,7 +53,7 @@ export const GerenciarClientes = () => {
       <Grow in={true} timeout={1500}>
         <section>
           <h2 className="gerenciarClientes__titulo">Clientes cadastrados</h2>
-          <div className="gerenciarClientes">{clientes}</div>
+          <div className="gerenciarClientes">{clientes.reverse()}</div>
 
           <ModalCliente id={id} show={modalShow} onHide={() => setModalShow(false)} />
         </section>

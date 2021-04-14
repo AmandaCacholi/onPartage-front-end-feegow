@@ -51,7 +51,7 @@ export const GerenciarFuncionarios = () => {
           <h2 className="gerenciarFuncionarios__titulo">
             Funcionários cadastrados
           </h2>
-          <div className="gerenciarFuncionarios">{funcionarios}</div>
+          <div className="gerenciarFuncionarios">{funcionarios.reverse()}</div>
           
           <ModalFuncionario
             id={id}
